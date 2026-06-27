@@ -148,8 +148,6 @@ playwright install chromium
 
 ### Environment Variables
 
-Create a `.env` file:
-
 ```env
 TELEGRAM_BOT_TOKEN=your_telegram_token
 BALE_BOT_TOKEN=your_bale_token
