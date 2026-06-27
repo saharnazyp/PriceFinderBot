@@ -112,7 +112,7 @@ playwright install chromium
 
 ### تنظیم متغیرهای محیطی
 
-یک فایل `.env` بسازید:
+:
 
 </div>
 
@@ -120,7 +120,6 @@ playwright install chromium
 TELEGRAM_BOT_TOKEN=your_telegram_token
 BALE_BOT_TOKEN=your_bale_token
 
-# اختیاری — فقط در صورت استفاده از پردازش زبان
 GROQ_API_KEY=your_groq_key
 GEMINI_API_KEY=your_gemini_key
 OPENROUTER_API_KEY=your_openrouter_key
