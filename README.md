@@ -4,7 +4,7 @@ Telegram &amp; Bale bot that scrapes Iranian e-commerce sites for product prices
 
 # 🔎 price-finder-bot
 
-**English · [فارسی](README.fa.md)**
+**English · [فارسیPersian](README.fa.md)**
 
 </div>
 
