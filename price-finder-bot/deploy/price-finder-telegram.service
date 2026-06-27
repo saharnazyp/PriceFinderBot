@@ -1,0 +1,22 @@
+# نصب:
+#   sudo cp deploy/price-finder-telegram.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now price-finder-telegram
+# مسیرها و کاربر (User, WorkingDirectory, ExecStart) را با محیط سرور خودت تنظیم کن.
+
+[Unit]
+Description=Price Finder Bot (Telegram)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/price-finder-bot
+ExecStart=/home/ubuntu/price-finder-bot/.venv/bin/python run.py telegram
+Restart=always
+RestartSec=5
+EnvironmentFile=/home/ubuntu/price-finder-bot/.env
+
+[Install]
+WantedBy=multi-user.target

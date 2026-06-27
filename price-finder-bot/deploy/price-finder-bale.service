@@ -1,0 +1,21 @@
+# نصب:
+#   sudo cp deploy/price-finder-bale.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now price-finder-bale
+
+[Unit]
+Description=Price Finder Bot (Bale)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/price-finder-bot
+ExecStart=/home/ubuntu/price-finder-bot/.venv/bin/python run.py bale
+Restart=always
+RestartSec=5
+EnvironmentFile=/home/ubuntu/price-finder-bot/.env
+
+[Install]
+WantedBy=multi-user.target
